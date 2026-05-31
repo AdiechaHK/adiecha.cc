@@ -280,6 +280,58 @@ section { padding: 90px 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 /* =========================================
+   LANG SWITCHER
+   ========================================= */
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 0.75rem;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.7);
+  border-radius: 5px;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1.4;
+}
+
+.lang-btn:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.lang-btn.active {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--dark);
+}
+
+.header.light-header .lang-btn {
+  border-color: rgba(0,0,0,0.2);
+  color: var(--text-muted);
+}
+
+.header.light-header .lang-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.header.light-header .lang-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--white);
+}
+
+/* =========================================
    HERO — HOME
    ========================================= */
 
@@ -1517,6 +1569,7 @@ section { padding: 90px 0; }
   .nav-links.active { display: flex; }
   .nav-links a { display: block; padding: 0.875rem 1rem; font-size: 1rem; }
   .hamburger { display: flex; }
+  .lang-switcher { margin-left: auto; margin-right: 0.5rem; }
 
   .about-brief-inner { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
   .about-text .section-subtitle, .about-text h2 { text-align: center; }

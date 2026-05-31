@@ -2,7 +2,88 @@
    VISHWAKARMA PARIVAR - Main JavaScript
    ========================================= */
 
+/* ── i18n Engine ──────────────────────────── */
+const SUPPORTED_LANGS = ['en', 'hi', 'gu'];
+const STORAGE_KEY = 'vk_lang';
+
+function cacheEnglishDefaults() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.dataset.i18nEn = el.textContent;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    el.dataset.i18nHtmlEn = el.innerHTML;
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    el.dataset.i18nPhEn = el.placeholder;
+  });
+}
+
+function applyTranslations(t, lang) {
+  if (lang === 'en' || !t) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      if (el.dataset.i18nEn !== undefined) el.textContent = el.dataset.i18nEn;
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      if (el.dataset.i18nHtmlEn !== undefined) el.innerHTML = el.dataset.i18nHtmlEn;
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      if (el.dataset.i18nPhEn !== undefined) el.placeholder = el.dataset.i18nPhEn;
+    });
+    return;
+  }
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.dataset.i18n];
+    if (v !== undefined) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const v = t[el.dataset.i18nHtml];
+    if (v !== undefined) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const v = t[el.dataset.i18nPlaceholder];
+    if (v !== undefined) el.placeholder = v;
+  });
+}
+
+async function setLanguage(lang) {
+  if (!SUPPORTED_LANGS.includes(lang)) lang = 'en';
+  let t = null;
+  if (lang !== 'en') {
+    try {
+      const res = await fetch('locales/' + lang + '.json');
+      if (res.ok) t = await res.json();
+    } catch (e) {
+      console.warn('Could not load', lang, 'translations');
+    }
+  }
+  applyTranslations(t, lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  document.documentElement.lang = lang;
+  localStorage.setItem(STORAGE_KEY, lang);
+}
+
+function initLanguage() {
+  cacheEnglishDefaults();
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved && SUPPORTED_LANGS.includes(saved) && saved !== 'en') {
+    setLanguage(saved);
+  } else {
+    // mark EN button active
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === 'en');
+    });
+  }
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  // ── Init language ─────────────────────────
+  initLanguage();
 
   // ── Mobile menu ─────────────────────────
   const hamburger = document.querySelector('.hamburger');

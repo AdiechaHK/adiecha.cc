@@ -21,13 +21,18 @@
       <nav class="nav">
         <a href="index.html" class="nav-logo"><span class="om">ॐ</span> Vishwakarma Parivar</a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="lord-vishwakarma.html">Lord Vishwakarma</a></li>
-          <li><a href="heritage.html">Heritage</a></li>
-          <li><a href="festivals.html">Festivals</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="lord-vishwakarma.html" data-i18n="nav_lord">Lord Vishwakarma</a></li>
+          <li><a href="heritage.html" data-i18n="nav_heritage">Heritage</a></li>
+          <li><a href="festivals.html" data-i18n="nav_festivals">Festivals</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+          <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
         </ul>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="hi">हि</button>
+          <button class="lang-btn" data-lang="gu">ગુ</button>
+        </div>
         <button class="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -44,9 +49,9 @@
         <h1>Contact Us</h1>
         <p>We'd love to hear from you — whether you're a community member, a researcher, or simply curious about Lord Vishwakarma and our traditions.</p>
         <div class="breadcrumb">
-          <a href="index.html">Home</a>
+          <a href="index.html" data-i18n="breadcrumb_home">Home</a>
           <i class="fas fa-chevron-right"></i>
-          <span>Contact</span>
+          <span data-i18n="con_breadcrumb">Contact</span>
         </div>
       </div>
     </div>
@@ -185,7 +190,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary btn-submit" style="width: 100%; justify-content: center; font-size: 1rem;">
-              <i class="fas fa-paper-plane"></i> Send Message
+              <i class="fas fa-paper-plane"></i> <span data-i18n="con_btn_submit">Send Message</span>
             </button>
 
             <p class="form-note">
@@ -275,7 +280,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo"><span class="om">ॐ</span> Vishwakarma Parivar</a>
-          <p class="footer-brand-desc">A community dedicated to preserving and celebrating the divine legacy of Lord Vishwakarma — the eternal craftsman of the gods.</p>
+          <p class="footer-brand-desc" data-i18n="footer_brand_desc">A community dedicated to preserving and celebrating the divine legacy of Lord Vishwakarma — the eternal craftsman of the gods.</p>
           <div class="social-links">
             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -284,27 +289,27 @@
           </div>
         </div>
         <div>
-          <p class="footer-heading">Quick Links</p>
+          <p class="footer-heading" data-i18n="footer_ql">Quick Links</p>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="lord-vishwakarma.html">Lord Vishwakarma</a></li>
-            <li><a href="heritage.html">Heritage</a></li>
-            <li><a href="festivals.html">Festivals</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="lord-vishwakarma.html" data-i18n="nav_lord">Lord Vishwakarma</a></li>
+            <li><a href="heritage.html" data-i18n="nav_heritage">Heritage</a></li>
+            <li><a href="festivals.html" data-i18n="nav_festivals">Festivals</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer-heading">Community</p>
+          <p class="footer-heading" data-i18n="footer_community">Community</p>
           <ul class="footer-links">
-            <li><a href="heritage.html#panch-jati">Panch Jati</a></li>
-            <li><a href="festivals.html">Vishwakarma Puja</a></li>
-            <li><a href="lord-vishwakarma.html">Divine Creations</a></li>
-            <li><a href="about.html">About the Community</a></li>
+            <li><a href="heritage.html#panch-jati" data-i18n="footer_panch_clans">Panch Jati Clans</a></li>
+            <li><a href="festivals.html" data-i18n="footer_festivals_h">Vishwakarma Puja</a></li>
+            <li><a href="lord-vishwakarma.html" data-i18n="footer_divine_creations">Divine Creations</a></li>
+            <li><a href="about.html" data-i18n="footer_about_community">About the Community</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer-heading">Contact</p>
+          <p class="footer-heading" data-i18n="footer_contact_h">Contact</p>
           <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@vishwakarmaparivar.org</span></div>
           <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+91 00000 00000</span></div>
           <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>India</span></div>
@@ -313,7 +318,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 <span>Vishwakarma Parivar</span>. All rights reserved. &nbsp;|&nbsp; Jai Vishwakarma</p>
-        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+        <div class="footer-bottom-links"><a href="#" data-i18n="footer_privacy">Privacy Policy</a><a href="#" data-i18n="footer_terms">Terms of Use</a></div>
       </div>
     </div>
   </footer>

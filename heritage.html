@@ -21,13 +21,18 @@
       <nav class="nav">
         <a href="index.html" class="nav-logo"><span class="om">ॐ</span> Vishwakarma Parivar</a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="lord-vishwakarma.html">Lord Vishwakarma</a></li>
-          <li><a href="heritage.html" class="active">Heritage</a></li>
-          <li><a href="festivals.html">Festivals</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+          <li><a href="lord-vishwakarma.html" data-i18n="nav_lord">Lord Vishwakarma</a></li>
+          <li><a href="heritage.html" class="active" data-i18n="nav_heritage">Heritage</a></li>
+          <li><a href="festivals.html" data-i18n="nav_festivals">Festivals</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="hi">हि</button>
+          <button class="lang-btn" data-lang="gu">ગુ</button>
+        </div>
         <button class="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -44,9 +49,9 @@
         <h1>Community Heritage</h1>
         <p>Thousands of years of craftsmanship, devotion, and tradition — the story of the Vishwakarma community across the ages.</p>
         <div class="breadcrumb">
-          <a href="index.html">Home</a>
+          <a href="index.html" data-i18n="breadcrumb_home">Home</a>
           <i class="fas fa-chevron-right"></i>
-          <span>Heritage</span>
+          <span data-i18n="her_breadcrumb">Heritage</span>
         </div>
       </div>
     </div>
@@ -128,7 +133,7 @@
 
         <div class="clan-card" data-aos="fade-up" data-aos-delay="0">
           <div class="clan-number">01</div>
-          <h4>Lohars</h4>
+          <h4 data-i18n="her_clan1_h4">Lohars</h4>
           <p class="clan-ancestor">Descendants of Manu</p>
           <p style="font-size: 0.8125rem; color: var(--text-muted);">Married Kanchna, daughter of Sage Angira</p>
           <span class="clan-craft-tag">Ironsmiths &amp; Blacksmiths</span>
@@ -136,7 +141,7 @@
 
         <div class="clan-card" data-aos="fade-up" data-aos-delay="80">
           <div class="clan-number">02</div>
-          <h4>Sutrdhars</h4>
+          <h4 data-i18n="her_clan2_h4">Sutrdhars</h4>
           <p class="clan-ancestor">Descendants of Maya</p>
           <p style="font-size: 0.8125rem; color: var(--text-muted);">Married Soumya, daughter of Sage Parasar</p>
           <span class="clan-craft-tag">Carpenters &amp; Woodworkers</span>
@@ -144,7 +149,7 @@
 
         <div class="clan-card" data-aos="fade-up" data-aos-delay="160">
           <div class="clan-number">03</div>
-          <h4>Tameras</h4>
+          <h4 data-i18n="her_clan3_h4">Tameras</h4>
           <p class="clan-ancestor">Descendants of Twashta</p>
           <p style="font-size: 0.8125rem; color: var(--text-muted);">Married Jayanti, daughter of Sage Kaushik</p>
           <span class="clan-craft-tag">Copper &amp; Bronzesmiths</span>
@@ -152,7 +157,7 @@
 
         <div class="clan-card" data-aos="fade-up" data-aos-delay="240">
           <div class="clan-number">04</div>
-          <h4>Shilpis</h4>
+          <h4 data-i18n="her_clan4_h4">Shilpis</h4>
           <p class="clan-ancestor">Descendants of Shilpi</p>
           <p style="font-size: 0.8125rem; color: var(--text-muted);">Married Karuna, daughter of Sage Bhrigu</p>
           <span class="clan-craft-tag">Sculptors &amp; Stonemasons</span>
@@ -160,7 +165,7 @@
 
         <div class="clan-card" data-aos="fade-up" data-aos-delay="320">
           <div class="clan-number">05</div>
-          <h4>Daivagyas</h4>
+          <h4 data-i18n="her_clan5_h4">Daivagyas</h4>
           <p class="clan-ancestor">Descendants of Visvajna</p>
           <p style="font-size: 0.8125rem; color: var(--text-muted);">Married Chandrika, daughter of Sage Jaimini</p>
           <span class="clan-craft-tag">Goldsmiths &amp; Jewellers</span>
@@ -316,7 +321,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo"><span class="om">ॐ</span> Vishwakarma Parivar</a>
-          <p class="footer-brand-desc">A community dedicated to preserving and celebrating the divine legacy of Lord Vishwakarma — the eternal craftsman of the gods.</p>
+          <p class="footer-brand-desc" data-i18n="footer_brand_desc">A community dedicated to preserving and celebrating the divine legacy of Lord Vishwakarma — the eternal craftsman of the gods.</p>
           <div class="social-links">
             <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
@@ -325,28 +330,28 @@
           </div>
         </div>
         <div>
-          <p class="footer-heading">Quick Links</p>
+          <p class="footer-heading" data-i18n="footer_ql">Quick Links</p>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="lord-vishwakarma.html">Lord Vishwakarma</a></li>
-            <li><a href="heritage.html">Heritage</a></li>
-            <li><a href="festivals.html">Festivals</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+            <li><a href="lord-vishwakarma.html" data-i18n="nav_lord">Lord Vishwakarma</a></li>
+            <li><a href="heritage.html" data-i18n="nav_heritage">Heritage</a></li>
+            <li><a href="festivals.html" data-i18n="nav_festivals">Festivals</a></li>
+            <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+            <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer-heading">Panch Jati</p>
+          <p class="footer-heading" data-i18n="footer_pj">Panch Jati</p>
           <ul class="footer-links">
-            <li><a href="#panch-jati">Lohars</a></li>
-            <li><a href="#panch-jati">Sutrdhars</a></li>
-            <li><a href="#panch-jati">Tameras</a></li>
-            <li><a href="#panch-jati">Shilpis</a></li>
-            <li><a href="#panch-jati">Daivagyas</a></li>
+            <li><a href="#panch-jati" data-i18n="footer_pj_1">Lohars (Ironsmiths)</a></li>
+            <li><a href="#panch-jati" data-i18n="footer_pj_2">Sutrdhars (Carpenters)</a></li>
+            <li><a href="#panch-jati" data-i18n="footer_pj_3">Tameras (Coppersmiths)</a></li>
+            <li><a href="#panch-jati" data-i18n="footer_pj_4">Shilpis (Sculptors)</a></li>
+            <li><a href="#panch-jati" data-i18n="footer_pj_5">Daivagyas (Goldsmiths)</a></li>
           </ul>
         </div>
         <div>
-          <p class="footer-heading">Contact</p>
+          <p class="footer-heading" data-i18n="footer_contact_h">Contact</p>
           <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>info@vishwakarmaparivar.org</span></div>
           <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+91 00000 00000</span></div>
           <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>India</span></div>
@@ -354,7 +359,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 <span>Vishwakarma Parivar</span>. All rights reserved. &nbsp;|&nbsp; Jai Vishwakarma</p>
-        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+        <div class="footer-bottom-links"><a href="#" data-i18n="footer_privacy">Privacy Policy</a><a href="#" data-i18n="footer_terms">Terms of Use</a></div>
       </div>
     </div>
   </footer>
